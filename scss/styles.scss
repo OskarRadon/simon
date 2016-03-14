@@ -1,0 +1,40 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .gameBoard {
+    display: flex;
+    flex-wrap: wrap;
+    height: 800px;
+    width: 800px;
+    .center {
+      position: absolute;
+      width: 350px;
+      height: 350px;
+      background: black;
+      border-radius: 100%;
+      top: 230px;
+      left: 390px;
+    }
+    .tile {
+      width:50%;
+      height:50%;
+    }
+    #green {
+      background: green;
+      border-radius: 100% 0 0 0;
+    }
+    #red {
+      background: red;
+      border-radius: 0 100% 0 0;
+    }
+    #yellow {
+      background: yellow;
+      border-radius: 0 0 0 100%;
+    }
+    #blue {
+      background: blue;
+      border-radius: 0 0 100% 0;
+    }
+  }
+}
