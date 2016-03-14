@@ -1,22 +1,23 @@
-var colors = ["red", "green", "blue", "yellow"];
 
-var simonArray = [];
-var userArray = [];
-var gameLoss = false;
+//NewGame constructor
 
-function randomNumber() {
-  return Math.floor(Math.random() * 4);
+function Game (colors, simonArray, userArray, gameLoss) {
+  this.colors = ["red", "green", "blue", "yellow"];
+  this.simonArray = [];
+  this.userArray = [];
+  this.gameLoss = false;
 }
 
-function generateColor() {
-  simonArray.push(colors[randomNumber()]);
+// generate new color and add it to simonArray
+
+Game.prototype.generateColor() {
+  simonArray.push(colors[Math.floor(Math.random() * 4)]);
   return simonArray;
 }
 
-// function to push user input to userArray
-
 // function to compare user and simonArray
-function compareArrays() {
+
+Game.prototype.compareArrays() {
   if userArray === simonArray {
     generateColor();
   } else {
