@@ -1,8 +1,8 @@
-body {
+body, body .gameBoard .center {
   display: flex;
   align-items: center;
   justify-content: center; }
-  body .gameBoard {
+  body .gameBoard, body .gameBoard .center .gameBoard {
     display: flex;
     flex-wrap: wrap;
     height: 800px;
@@ -11,24 +11,35 @@ body {
       position: absolute;
       width: 350px;
       height: 350px;
-      background: black;
+      background: #454647;
       border-radius: 100%;
       top: 230px;
       left: 390px; }
+      body .gameBoard .center button {
+        outline: none;
+        font-size: 1em;
+        border-radius: 3px;
+        background: #919394;
+        border: none;
+        box-shadow: 3px 3px 0 black; }
+        body .gameBoard .center button:active {
+          box-shadow: none;
+          background: #c5c6c6;
+          transform: translate(3px, 3px); }
     body .gameBoard .tile {
       width: 50%;
       height: 50%; }
     body .gameBoard #green {
-      background: green;
+      background: #9BEA81;
       border-radius: 100% 0 0 0; }
     body .gameBoard #red {
-      background: red;
+      background: #FE4A49;
       border-radius: 0 100% 0 0; }
     body .gameBoard #yellow {
-      background: yellow;
+      background: #FED766;
       border-radius: 0 0 0 100%; }
     body .gameBoard #blue {
-      background: blue;
+      background: #2AB7CA;
       border-radius: 0 0 100% 0; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -8,32 +8,46 @@ body {
     height: 800px;
     width: 800px;
     .center {
+      @extend body;
       position: absolute;
       width: 350px;
       height: 350px;
-      background: black;
+      background: #454647;
       border-radius: 100%;
       top: 230px;
       left: 390px;
+      button {
+        outline: none;
+        font-size: 1em;
+        border-radius: 3px;
+        background: lighten(#454647, 30%);
+        border: none;
+        box-shadow: 3px 3px 0 black;
+        &:active {
+          box-shadow: none;
+          background: lighten(#454647, 50%);
+          transform: translate(3px, 3px);
+        }
+      }
     }
     .tile {
       width:50%;
       height:50%;
     }
     #green {
-      background: green;
+      background: #9BEA81;
       border-radius: 100% 0 0 0;
     }
     #red {
-      background: red;
+      background: #FE4A49;
       border-radius: 0 100% 0 0;
     }
     #yellow {
-      background: yellow;
+      background: #FED766;
       border-radius: 0 0 0 100%;
     }
     #blue {
-      background: blue;
+      background: #2AB7CA;
       border-radius: 0 0 100% 0;
     }
   }
